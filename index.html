@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadeskie</title>
+    <style>
+        #hiddenText {
+            display: none;
+        }
+    </style>
+</head>
 <body>
 
-  <head>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
 
-    <title> Jadeskie</title>
-  </head>
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <button onclick="toggleText()">Show Hidden Text</button>
+    <p id="hiddenText">This is the hidden text!</p>
+
+    <script>
+        function toggleText() {
+            var text = document.getElementById("hiddenText");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
